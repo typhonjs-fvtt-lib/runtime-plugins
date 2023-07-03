@@ -1,1 +1,2 @@
-export * from '#runtime-plugins/svelte/store/web-storage';
+export * from './TJSPLocalStorage.js';
+export * from './TJSPSessionStorage.js';

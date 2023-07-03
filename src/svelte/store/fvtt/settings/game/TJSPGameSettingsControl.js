@@ -35,6 +35,11 @@ export class TJSPGameSettingsControl
       }
    }
 
+   /**
+    * Handles eventbus registration.
+    *
+    * @param {import('#runtime/plugin/manager').PluginInvokeEvent} ev - Plugin event.
+    */
    onPluginLoad(ev)
    {
       this._eventbus = ev.eventbus;

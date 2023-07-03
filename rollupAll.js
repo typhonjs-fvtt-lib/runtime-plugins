@@ -29,6 +29,22 @@ const rollupConfigs = [
          generatedCode: { constBindings: true },
          sourcemap
       }
+   },
+   {
+      input: {
+         input: 'src/svelte/store/web-storage/index.js',
+         plugins: [
+            importsExternal(),
+            resolve(),
+            generateDTS.plugin(dtsPluginOptions)
+         ]
+      },
+      output: {
+         file: '_dist/svelte/store/web-storage/index.js',
+         format: 'es',
+         generatedCode: { constBindings: true },
+         sourcemap
+      }
    }
 ];
 

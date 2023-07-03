@@ -111,6 +111,11 @@ export class TJSPGameSettings
       for (const entry of settings) { this.register(entry, coreConfig); }
    }
 
+   /**
+    * Handles eventbus registration.
+    *
+    * @param {import('#runtime/plugin/manager').PluginInvokeEvent} ev - Plugin event.
+    */
    onPluginLoad(ev)
    {
       this._eventbus = ev.eventbus;

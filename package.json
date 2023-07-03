@@ -10,8 +10,7 @@
   "sideEffects": false,
   "imports": {
     "#runtime/*": "@typhonjs-fvtt/runtime/*",
-    "#runtime-plugins/*": "@typhonjs-svelte/runtime-plugins/*",
-    "#standard/*": "@typhonjs-fvtt/svelte-standard/*"
+    "#runtime-plugins/*": "@typhonjs-svelte/runtime-plugins/*"
   },
   "exports": {
     "./svelte/store/fvtt": {
