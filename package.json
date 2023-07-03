@@ -1,0 +1,63 @@
+{
+  "name": "@typhonjs-fvtt/runtime-plugins",
+  "version": "0.0.0",
+  "description": "Provides TyphonJS plugins for the FoundryVTT version of the TyphonJS Runtime Library..",
+  "type": "module",
+  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "contributors": [
+    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+  ],
+  "sideEffects": false,
+  "imports": {
+    "#runtime/*": "@typhonjs-fvtt/runtime/*",
+    "#runtime-plugins/*": "@typhonjs-svelte/runtime-plugins/*",
+    "#standard/*": "@typhonjs-fvtt/svelte-standard/*"
+  },
+  "exports": {
+    "./svelte/store/fvtt": {
+      "types": "./_dist/svelte/store/fvtt/index.d.ts",
+      "import": "./_dist/svelte/store/fvtt/index.js"
+    },
+    "./svelte/store/web-storage": {
+      "types": "./_dist/svelte/store/web-storage/index.d.ts",
+      "import": "./_dist/svelte/store/web-storage/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15",
+    "@typhonjs-build-test/esm-d-ts": "^0.0.26",
+    "@typhonjs-build-test/rollup-plugin-pkg-imports": "^0.0.2",
+    "@typhonjs-config/eslint-config": "^0.6.3",
+    "@typhonjs-fvtt/runtime": "^0.0.23",
+    "eslint": "^8",
+    "rollup": "^3"
+  },
+  "peerDependencies": {
+    "svelte": ">=4.x.x"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "homepage": "https://github.com/typhonjs-fvtt-lib/runtime-plugins#readme",
+  "keywords": [
+    "TyphonJS",
+    "Runtime",
+    "Library",
+    "Svelte",
+    "Foundry VTT",
+    "Plugins"
+  ],
+  "scripts": {
+    "build": "node rollupAll.js",
+    "eslint": "eslint ."
+  },
+  "files": [
+    "/_dist",
+    "/src"
+  ],
+  "directories": {},
+  "license": "MPL-2.0",
+  "repository": "github:typhonjs-fvtt-lib/runtime-plugins",
+  "bugs": "https://github.com/typhonjs-fvtt-lib/runtime-plugins/issues"
+}
