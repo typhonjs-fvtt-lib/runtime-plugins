@@ -16,6 +16,23 @@ const dtsPluginOptions = {
 const rollupConfigs = [
    {
       input: {
+         input: 'src/dompurify/index.js',
+         plugins: [
+            importsExternal(),
+            resolve(),
+            generateDTS.plugin(dtsPluginOptions)
+         ]
+      },
+      output: {
+         file: '_dist/dompurify/index.js',
+         format: 'es',
+         generatedCode: { constBindings: true },
+         sourcemap
+      }
+   },
+
+   {
+      input: {
          input: 'src/svelte/store/fvtt/index.js',
          plugins: [
             importsExternal(),

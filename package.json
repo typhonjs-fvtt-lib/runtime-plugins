@@ -13,6 +13,10 @@
     "#runtime-plugins/*": "@typhonjs-svelte/runtime-plugins/*"
   },
   "exports": {
+    "./dompurify": {
+      "types": "./_dist/dompurify/index.d.ts",
+      "import": "./_dist/dompurify/index.js"
+    },
     "./svelte/store/fvtt": {
       "types": "./_dist/svelte/store/fvtt/index.d.ts",
       "import": "./_dist/svelte/store/fvtt/index.js"
