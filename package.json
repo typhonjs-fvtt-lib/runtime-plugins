@@ -13,9 +13,9 @@
     "#runtime-plugins/*": "@typhonjs-svelte/runtime-plugins/*"
   },
   "exports": {
-    "./dompurify": {
-      "types": "./_dist/dompurify/index.d.ts",
-      "import": "./_dist/dompurify/index.js"
+    "./security/client/dompurify": {
+      "types": "./_dist/security/client/dompurify/index.d.ts",
+      "import": "./_dist/security/client/dompurify/index.js"
     },
     "./svelte/store/fvtt": {
       "types": "./_dist/svelte/store/fvtt/index.d.ts",
@@ -28,13 +28,13 @@
     "./package.json": "./package.json"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15",
-    "@typhonjs-build-test/esm-d-ts": "^0.0.26",
-    "@typhonjs-build-test/rollup-plugin-pkg-imports": "^0.0.2",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@typhonjs-build-test/esm-d-ts": "^0.3.0-next.8",
+    "@typhonjs-build-test/rollup-plugin-pkg-imports": "^0.5.0",
     "@typhonjs-config/eslint-config": "^0.6.3",
-    "@typhonjs-fvtt/runtime": "^0.0.23",
+    "@typhonjs-fvtt/runtime": "^0.1.3",
     "eslint": "^8",
-    "rollup": "^3"
+    "rollup": "^4"
   },
   "peerDependencies": {
     "svelte": ">=4.x.x"

@@ -16,7 +16,7 @@ const dtsPluginOptions = {
 const rollupConfigs = [
    {
       input: {
-         input: 'src/dompurify/index.js',
+         input: 'src/security/client/dompurify/index.js',
          plugins: [
             importsExternal(),
             resolve(),
@@ -24,7 +24,7 @@ const rollupConfigs = [
          ]
       },
       output: {
-         file: '_dist/dompurify/index.js',
+         file: '_dist/security/client/dompurify/index.js',
          format: 'es',
          generatedCode: { constBindings: true },
          sourcemap
