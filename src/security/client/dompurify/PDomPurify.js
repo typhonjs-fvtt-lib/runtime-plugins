@@ -1,6 +1,6 @@
-import { DOMPurify } from '@typhonjs-fvtt/runtime/dompurify';
+import { DOMPurify } from '#runtime/security/client/dompurify';
 
-class PDOMPurify
+export class PDOMPurify
 {
    static sanitize(dirty)
    {
@@ -27,6 +27,3 @@ class PDOMPurify
       ev.eventbus.on(`${prepend}dompurify:sanitize:video`, this.sanitizeWithVideo, this, opts);
    }
 }
-
-export { PDOMPurify };
-//# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-import { TJSGameSettings } from '#runtime/svelte/store/fvtt';
+import { TJSGameSettings } from '#runtime/svelte/store/fvtt/settings';
 
 import {
    isIterable,
