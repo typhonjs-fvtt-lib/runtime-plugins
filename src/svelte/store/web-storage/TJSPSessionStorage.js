@@ -18,10 +18,19 @@ export class TJSPSessionStorage
    {
       const prepend = typeof ev?.pluginOptions?.eventPrepend === 'string' ? `${ev.pluginOptions.eventPrepend}:` : '';
 
-      ev.eventbus.on(`${prepend}storage:session:item:get`, this.#storage.getItem, this.#storage, { guard: true });
-      ev.eventbus.on(`${prepend}storage:session:item:boolean:swap`, this.#storage.swapItemBoolean, this.#storage,
-       { guard: true });
-      ev.eventbus.on(`${prepend}storage:session:item:set`, this.#storage.setItem, this.#storage, { guard: true });
-      ev.eventbus.on(`${prepend}storage:session:store:get`, this.#storage.getStore, this.#storage, { guard: true });
+      const opts = { guard: true };
+
+      ev.eventbus.on(`${prepend}storage:session:get`, () => this.#storage, this.#storage, opts);
+
+      ev.eventbus.on(`${prepend}storage:session:entries`, this.#storage.entries, this.#storage, opts);
+      ev.eventbus.on(`${prepend}storage:session:keys`, this.#storage.keys, this.#storage, opts);
+      ev.eventbus.on(`${prepend}storage:session:stores`, this.#storage.stores, this.#storage, opts);
+
+      ev.eventbus.on(`${prepend}storage:session:item:get`, this.#storage.getItem, this.#storage, opts);
+      ev.eventbus.on(`${prepend}storage:session:item:boolean:swap`, this.#storage.swapItemBoolean, this.#storage, opts);
+      ev.eventbus.on(`${prepend}storage:session:item:set`, this.#storage.setItem, this.#storage, opts);
+
+      ev.eventbus.on(`${prepend}storage:session:store:get`, this.#storage.getStore, this.#storage, opts);
+      ev.eventbus.on(`${prepend}storage:session:store:has`, this.#storage.hasStore, this.#storage, opts);
    }
 }

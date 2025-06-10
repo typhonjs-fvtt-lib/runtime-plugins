@@ -1,2 +1,2 @@
 export * from './TJSPGameSettings.js';
-export * from './TJSPGameSettingsControl.js'
+export * from './TJSPGameSettingsControl.js';
